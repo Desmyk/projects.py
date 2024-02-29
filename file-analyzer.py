@@ -27,7 +27,7 @@ def analyze_file(file_cont):
         num_words = count_words(file)
         if num_words == 0:
             return 0 
-        num_letters = sum(len(word) for word in re.findall(r'\w+', ))
+        num_letters = sum(len(word) for word in re.findall(r'\w+', file ))
     # Calculate the average word length else return 0
         return num_letters / num_words
    
@@ -35,7 +35,7 @@ def analyze_file(file_cont):
     def most_common_word(file):
     # Calculate the number of times a particular word occurs
         word_counts = {}
-        for word in re.findall(r'\w+', file.read().lower()):
+        for word in re.findall(r'\w+', file.lower()):
             if word not in word_counts:
                  word_counts[word] = 0
             word_counts[word] += 1
@@ -57,6 +57,8 @@ def analyze_file(file_cont):
     print("Number of characters: ", characters)
     print("Average word length: ", avg_word_length_)
     print("Most common word: ", most_common_word_)
+    
+analyze_file(file_cont)
     
 
              
