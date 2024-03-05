@@ -47,7 +47,7 @@ fetch_save_data('episode')
 
 
 # Open the characters.csv file in read mode
-with open('characters.csv', mode='r', newline='') as f: 
+with open('character.csv', mode='r', newline='') as f: 
      reader = csv.DictReader(f)
      # iterate through the rows in CSV file
      for row in reader:
@@ -56,7 +56,7 @@ with open('characters.csv', mode='r', newline='') as f:
         
  
  # Open the locations.csv file in read mode
-with open('locations.csv', mode='r', newline='') as f: 
+with open('location.csv', mode='r', newline='') as f: 
      # Create a CSV reader object
      reader = csv.DictReader(f)
      # iterate through the rows in CSV file
@@ -66,7 +66,7 @@ with open('locations.csv', mode='r', newline='') as f:
         
         
 # Open the episodes.csv file in read mode
-with open('episodes.csv', mode='r', newline='') as f: 
+with open('episode.csv', mode='r', newline='') as f: 
      # Create a CSV reader object
      reader = csv.DictReader(f)
      # iterate through the rows in CSV file
