@@ -62,7 +62,7 @@ class Library:
                 status = "checked out"
             else:
                 status = "not checked out"
-            print(f"{book.title} by {book.author} (ISBN {book.isbn}) - {status}")
+        print(f"{book.title} by {book.author} (ISBN {book.isbn}) - {status}")
         
 
 lib = Library()    
