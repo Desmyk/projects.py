@@ -4,15 +4,15 @@ class Book:
         self.title = title
         self.author = author
         self.isbn = isbn
-        self._is_checked_out = True
+        self._is_checked_out = False
         
     def check_out(self):
         if self._is_checked_out:
-            self._is_checked_out = True
+            return True
 
     def return_book(self):
         if not self._is_checked_out:
-            self._is_checked_out = False
+            return self._is_checked_out
         
         
 # represents a library with a list of books
@@ -29,7 +29,7 @@ class Library:
     def remove_book(self, isbn):
         for book in self.books:
             if book.isbn == isbn:
-                self.books.remove(book)
+                self.books.remove(isbn)
                 return True
         print(f'Error:No book with ISBN {isbn} found')
         

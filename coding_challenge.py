@@ -7,7 +7,7 @@ string = "Please contact 'info@example.com' for assistance. Phone: (123) 456-789
 def extract_phone_numbers(string):
     
     # Define regex pattern for phone numbers
-    pattern = re.compile(r'^(\+\d{1,2}\s?)?((\(\d{3}\)|\d{3}))[\s.-]?\d{3}[\s.-]?\d{4}$')
+    pattern = re.compile(r'^(\+\d{3}\s?)?((\(\d{3}\)|\d{3}))[\s.-]?\d{3}[\s.-]?\d{4}$')
     
     # find all matches of pattern in string
     matches = pattern.findall(string)
